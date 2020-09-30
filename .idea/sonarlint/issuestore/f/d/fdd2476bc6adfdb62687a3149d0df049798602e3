@@ -1,0 +1,7 @@
+
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ΧΖαξ8μ‡ΰΙ.
+U	java:S106*"9Replace this use of System.out or System.err by a logger.(ΧΖαξ8άΆχΙ.
+y	java:S127"XRefactor the code in order to not assign to this loop counter from within the loop body.(¦ύΎύÿÿÿÿ8ΚΉ™Ι.
+v
+java:S3012$"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(ω®¨8σϋ€™Ι.
+t	java:S127 "XRefactor the code in order to not assign to this loop counter from within the loop body.(νΎ―λ8ΨΐΙ.
