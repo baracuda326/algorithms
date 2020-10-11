@@ -48,5 +48,5 @@ public class LinkedList {
         System.out.println("");
         System.out.println("Reversed linked list ");
         list.printList(head);
-    }
+     }
 }

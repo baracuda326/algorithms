@@ -19,3 +19,6 @@ e
 .src/com/company/arrays/ValidMountainArray.java,e\4\e455edc8de1df76ae76279713ea9915f2273cb6f
 Z
 *src/com/company/linkedlist/LinkedList.java,2\b\2b75231d9be8011bbc7509cae33974929298ecd6
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
