@@ -24,13 +24,7 @@ public class SumTwoArraysSwapOneElem {
         if (a.length - 1 < n || b.length < m) throw new IllegalArgumentException();
         int sum1 = getSum(a);
         int sum2 = getSum(b);
-        int buf1 = getNumberToIndex(a, n);
-        int buf2 = getNumberToIndex(b, m);
-        return (sum1 - buf1 + buf2) == sum1 || (sum2 - buf2 + buf1) == sum2;
-    }
-
-    private static int getNumberToIndex(int[] array, int n) {
-        return array[n];
+        return (sum1 - a[n] + b[m]) == sum1 || (sum2 - b[m] + a[n]) == sum2;
     }
 
     private static void swapInPosition(int[] a, int n, int[] b, int m) {
