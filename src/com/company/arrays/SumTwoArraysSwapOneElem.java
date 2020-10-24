@@ -8,30 +8,27 @@ public class SumTwoArraysSwapOneElem {
     public static void main(String[] args) {
         int[] a = {1, 2, 3, 4};
         int[] b = {1, 2, 3, 4};
-        System.out.println(checkArrays(a, 1, b, 2));
-        System.out.println(checkArrays2(a, 1, b, 2));
-        System.out.println(checkArrays3(a, 1, b, 2));
+        System.out.println(checkArrays(a, 1, b, 1));
+        System.out.println(checkArrays2(a, 1, b, 1));
+        System.out.println(checkArrays3(a, 1, b, 1));
     }
 
     private static boolean checkArrays(int[] a, int n, int[] b, int m) {
         if (a.length - 1 < n || b.length < m) throw new IllegalArgumentException();
-        int sum1 = getSum(a);
-        int sum2 = getSum(b);
         swapInPosition(a, n, b, m);
-        return getSum(a) == sum1 || getSum(b) == sum2;
+        return getSum(a) == getSum(b);
     }
 
     private static boolean checkArrays2(int[] a, int n, int[] b, int m) {
         if (a.length - 1 < n || b.length < m) throw new IllegalArgumentException();
-        int sum1 = getSum(a);
-        int sum2 = getSum(b);
-        return (sum1 - a[n] + b[m]) == sum1 || (sum2 - b[m] + a[n]) == sum2;
+        return (getSum(a) - a[n] + b[m]) == (getSum(b) - b[m] + a[n]);
     }
 
     private static boolean checkArrays3(int[] a, int n, int[] b, int m) {
         if (a.length - 1 < n || b.length < m) throw new IllegalArgumentException();
-        return (getSum(a) - getSum(b)) == a[n] - b[m];
+        return (getSum(a) - getSum(b)) / 2 == a[n] - b[m];
     }
+
 
     private static void swapInPosition(int[] a, int n, int[] b, int m) {
         int buf1;
