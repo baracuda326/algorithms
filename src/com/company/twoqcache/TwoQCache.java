@@ -385,7 +385,7 @@ public class TwoQCache<K, V> implements ITwoQ<K,V> {
      * of entries in the cache. For all other caches, this returns the sum of
      * the sizes of the entries in this cache.
      */
-    public synchronized final int size() {
+    public synchronized int size() {
         return sizeIn + sizeOut + sizeHot;
     }
 
@@ -394,7 +394,7 @@ public class TwoQCache<K, V> implements ITwoQ<K,V> {
      * number of entries in the cache. For all other caches, this returns the
      * maximum sum of the sizes of the entries in this cache.
      */
-    public synchronized final int maxSize() {
+    public synchronized int maxSize() {
         return maxSizeIn + maxSizeOut + maxSizeHot;
     }
 
@@ -402,7 +402,7 @@ public class TwoQCache<K, V> implements ITwoQ<K,V> {
      * Returns the number of times {@link #get} returned a value that was
      * already present in the cache.
      */
-    public synchronized final int hitCount() {
+    public synchronized int hitCount() {
         return hitCount;
     }
 
@@ -410,28 +410,28 @@ public class TwoQCache<K, V> implements ITwoQ<K,V> {
      * Returns the number of times {@link #get} returned null or required a new
      * value to be created.
      */
-    public synchronized final int missCount() {
+    public synchronized int missCount() {
         return missCount;
     }
 
     /**
      * Returns the number of times {@link #create(Object)} returned a value.
      */
-    public synchronized final int createCount() {
+    public synchronized int createCount() {
         return createCount;
     }
 
     /**
      * Returns the number of times {@link #put} was called.
      */
-    public synchronized final int putCount() {
+    public synchronized int putCount() {
         return putCount;
     }
 
     /**
      * Returns the number of values that have been evicted.
      */
-    public synchronized final int evictionCount() {
+    public synchronized int evictionCount() {
         return evictionCount;
     }
 
@@ -439,12 +439,12 @@ public class TwoQCache<K, V> implements ITwoQ<K,V> {
      * Returns a copy of the current contents of the cache, ordered from least
      * recently accessed to most recently accessed.
      */
-    public synchronized final Map<K, V> snapshot() {
+    public synchronized Map<K, V> snapshot() {
         return new HashMap<>(map);
     }
 
     @Override
-    public synchronized final String toString() {
+    public synchronized String toString() {
         int accesses = hitCount + missCount;
         int hitPercent = accesses != 0 ? (100 * hitCount / accesses) : 0;
         return String.format("Cache[size=%d,maxSize=%d,hits=%d,misses=%d,hitRate=%d%%," +
@@ -455,9 +455,7 @@ public class TwoQCache<K, V> implements ITwoQ<K,V> {
 
     public List<Object> getMapHotSnapshot() {
         List<Object> result = new ArrayList<>();
-        Iterator<K> it = mapHot.iterator();
-        while (it.hasNext()) {
-            K key = it.next();
+        for (K key : mapHot) {
             result.add(key);
             result.add(map.get(key));
         }
