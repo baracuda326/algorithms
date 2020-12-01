@@ -31,10 +31,8 @@ public class SumTwoArraysSwapOneElem {
 
 
     private static void swapInPosition(int[] a, int n, int[] b, int m) {
-        int buf1;
-        int buf2;
-        buf1 = a[n];
-        buf2 = b[m];
+        int buf1 = a[n];
+        int buf2 = b[m];
         a[n] = buf2;
         b[m] = buf1;
     }

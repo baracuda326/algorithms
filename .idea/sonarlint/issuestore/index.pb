@@ -92,3 +92,7 @@ S
 -src/com/company/arrays/ConvertList2Array.java,1\7\1729866d4578c8176da94e17f31e16d9aeec1301
 ^
 .src/com/company/arrays/ConvertMatrix2List.java,a\6\a69e51f2049ed74fe35dab0e39836269c7e0954e
+c
+3src/com/company/arrays/SumTwoArraysSwapOneElem.java,b\c\bcaecb9b2f8f1551d1a930ae753e312e521a6cd5
+N
+src/com/company/test/Test.java,3\a\3a12ba61f12f979e5e8ce32e1c8ee6a282b14fb9
