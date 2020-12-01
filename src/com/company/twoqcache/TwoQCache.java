@@ -4,10 +4,10 @@ import java.util.*;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-public class TwoQCache<K, V> {
+public class TwoQCache<K, V> implements ITwoQ<K,V> {
     private Map<K, V> map;
     private Set<K> mapIn, mapOut, mapHot;
-    private float quarter = .25f;
+    private float quarter;
     private ReadWriteLock readWriteLock;
     /**
      * Size of this cache in units. Not necessarily the number of elements.
@@ -30,6 +30,7 @@ public class TwoQCache<K, V> {
     public TwoQCache(int maxSize) {
         if (maxSize <= 0) throw new IllegalArgumentException("max size <= 0");
         this.readWriteLock = new ReentrantReadWriteLock();
+        this.quarter = .25f;
         calcMaxSizes(maxSize);
         this.map = new HashMap<>(0, 0.75f);
         this.mapIn = new LinkedHashSet<>();
@@ -138,11 +139,10 @@ public class TwoQCache<K, V> {
         if (key == null || value == null) {
             throw new NullPointerException("key == null || value == null");
         }
-
+        readWriteLock.writeLock().lock();
         if (map.containsKey(key)) {
             // if already have - replace it.
             // Cache size may be over headed at this moment
-            readWriteLock.writeLock().lock();
             V oldValue = map.get(key);
             if (mapIn.contains(key)) {
                 sizeIn -= safeSizeOf(key, oldValue);
