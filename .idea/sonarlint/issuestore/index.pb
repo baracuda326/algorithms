@@ -96,3 +96,9 @@ c
 3src/com/company/arrays/SumTwoArraysSwapOneElem.java,b\c\bcaecb9b2f8f1551d1a930ae753e312e521a6cd5
 N
 src/com/company/test/Test.java,3\a\3a12ba61f12f979e5e8ce32e1c8ee6a282b14fb9
+T
+$src/com/company/twoqcache/ITwoQ.java,c\a\ca834c835a23b16e3869836e993f675aa85767e5
+X
+(src/com/company/twoqcache/TestCache.java,c\4\c4b4dbe236aff673acfe1907633ab25ce1d45cb6
+X
+(src/com/company/twoqcache/TwoQCache.java,4\e\4e0f4572f39283f2289affe2dc6c2dd25e4ec453
