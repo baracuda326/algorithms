@@ -102,3 +102,19 @@ X
 (src/com/company/twoqcache/TestCache.java,c\4\c4b4dbe236aff673acfe1907633ab25ce1d45cb6
 X
 (src/com/company/twoqcache/TwoQCache.java,4\e\4e0f4572f39283f2289affe2dc6c2dd25e4ec453
+Z
+*src/com/company/iterator/TestIterator.java,1\f\1f9938dd3879e9f575eea0bf8dc8cfbd3542f2b8
+Z
+*src/com/company/functions/MyInterface.java,4\f\4fcc9e15db739932b6aff652b5f1a0c18bd6c98b
+S
+#src/com/company/functions/Test.java,8\2\8257f4422a24b19ed71726d71c537060c7fe559c
+P
+ src/com/company/map/TestMap.java,b\1\b150d797c3d8c4818e573830f9c65d0af6b07c5a
+b
+2src/com/company/singleton/ThreadSafeSingleton.java,5\3\539e2147ecae1966fedab837bbe9bda8b044ce4e
+S
+#src/com/company/singleton/Test.java,e\7\e708515a4e7f80435423ee64e83146bf67b11206
+P
+ src/com/company/thread/Test.java,c\5\c5099941e4b06fad7e6985f174413ec2a7d3bd97
+x
+Hsrc/com/company/patterns/creational/abstractfactory/AbstractFactory.java,9\1\91ac0c78ad75d5646bcf71ff25a27154cab138bb
